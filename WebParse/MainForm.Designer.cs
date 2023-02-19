@@ -40,6 +40,7 @@
             this.pbx_Poster = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.filmlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.oyuncuEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.türlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fimEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txt_FilmBul = new System.Windows.Forms.TextBox();
@@ -150,22 +151,33 @@
             // 
             // filmlerToolStripMenuItem
             // 
+            this.filmlerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.oyuncuEkleToolStripMenuItem});
             this.filmlerToolStripMenuItem.Name = "filmlerToolStripMenuItem";
             this.filmlerToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.filmlerToolStripMenuItem.Text = "Oyuncular";
             this.filmlerToolStripMenuItem.Click += new System.EventHandler(this.filmlerToolStripMenuItem_Click);
+            // 
+            // oyuncuEkleToolStripMenuItem
+            // 
+            this.oyuncuEkleToolStripMenuItem.Name = "oyuncuEkleToolStripMenuItem";
+            this.oyuncuEkleToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.oyuncuEkleToolStripMenuItem.Text = "Oyuncu Ekle";
+            this.oyuncuEkleToolStripMenuItem.Click += new System.EventHandler(this.oyuncuEkleToolStripMenuItem_Click);
             // 
             // türlerToolStripMenuItem
             // 
             this.türlerToolStripMenuItem.Name = "türlerToolStripMenuItem";
             this.türlerToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
             this.türlerToolStripMenuItem.Text = "Türler";
+            this.türlerToolStripMenuItem.Click += new System.EventHandler(this.türlerToolStripMenuItem_Click);
             // 
             // fimEkleToolStripMenuItem
             // 
             this.fimEkleToolStripMenuItem.Name = "fimEkleToolStripMenuItem";
             this.fimEkleToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
             this.fimEkleToolStripMenuItem.Text = "Fim Ekle";
+            this.fimEkleToolStripMenuItem.Click += new System.EventHandler(this.fimEkleToolStripMenuItem_Click);
             // 
             // txt_FilmBul
             // 
@@ -225,5 +237,6 @@
         private DataGridViewTextBoxColumn Oyuncular;
         private DataGridViewTextBoxColumn Poster;
         private DataGridViewTextBoxColumn Tur;
+        private ToolStripMenuItem oyuncuEkleToolStripMenuItem;
     }
 }

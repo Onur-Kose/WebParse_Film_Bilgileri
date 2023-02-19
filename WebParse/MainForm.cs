@@ -11,6 +11,7 @@ namespace WebParse
         MovieDbContext db = new MovieDbContext();
         public MainForm()
         {
+            //Onur Son Proje
             //proje ilk açýldýðýnda data grid viev dolu larak gelsin
             InitializeComponent();
         }
@@ -114,6 +115,24 @@ namespace WebParse
         {
             Oyuncular frm = new Oyuncular();
             frm.Show();
+        }
+
+        private void oyuncuEkleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OyuncuEkleForm frm = new OyuncuEkleForm();
+            frm.Show();
+        }
+
+        private void türlerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TurlerForm frm = new TurlerForm();
+            frm.Show();
+        }
+
+        private void fimEkleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FilmEkle frmEkle = new FilmEkle();
+            frmEkle.Show();
         }
     }
 }

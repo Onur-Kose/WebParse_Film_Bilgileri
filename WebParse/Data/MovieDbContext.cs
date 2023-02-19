@@ -20,6 +20,7 @@ namespace WebParse.Data
         {
             //modelBuilder.Entity<Film>().Property(x => x.imdbPuanı).HasPrecision(2, 1); // decimal (2,1) görevini görür
             base.OnModelCreating(modelBuilder);
+
             //modelBuilder.Entity<Film>().HasData(new Film { Ad = "loren", ID = 1 });
             //modelBuilder.Entity<Oyuncu>().HasData(new Oyuncu { AdSoyAd = "onurKöse", Id = 1 });
 
