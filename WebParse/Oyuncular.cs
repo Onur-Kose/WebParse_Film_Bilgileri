@@ -52,7 +52,8 @@ namespace WebParse
 
         private void btn_oyuncuSil_Click(object sender, EventArgs e)
         {
-            var query = db.Oyuncular.Where(x => x.Id == (int)dvg_oyuncular.SelectedRows[0].Cells[0].Value).FirstOrDefault();
+            int deneme = (int)dvg_oyuncular.SelectedRows[0].Cells[0].Value;
+            var query = db.Oyuncular.Where(x => x.Id == deneme).FirstOrDefault();
             db.Oyuncular.Remove(query);
             db.SaveChanges();
             OyuncularıListele();

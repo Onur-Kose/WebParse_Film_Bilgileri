@@ -40,6 +40,8 @@
             this.txt_ImdbID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_TurAdi = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txt_PosterURL = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +57,7 @@
             // 
             // btn_Tur_Ekle
             // 
-            this.btn_Tur_Ekle.Location = new System.Drawing.Point(650, 340);
+            this.btn_Tur_Ekle.Location = new System.Drawing.Point(641, 374);
             this.btn_Tur_Ekle.Name = "btn_Tur_Ekle";
             this.btn_Tur_Ekle.Size = new System.Drawing.Size(114, 42);
             this.btn_Tur_Ekle.TabIndex = 7;
@@ -132,9 +134,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(429, 247);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 20);
+            this.label5.Size = new System.Drawing.Size(49, 20);
             this.label5.TabIndex = 15;
-            this.label5.Text = "Tur Adı";
+            this.label5.Text = "Tur ID";
             // 
             // txt_TurAdi
             // 
@@ -143,11 +145,29 @@
             this.txt_TurAdi.Size = new System.Drawing.Size(235, 27);
             this.txt_TurAdi.TabIndex = 14;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(429, 295);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 20);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Poster URL";
+            // 
+            // txt_PosterURL
+            // 
+            this.txt_PosterURL.Location = new System.Drawing.Point(520, 288);
+            this.txt_PosterURL.Name = "txt_PosterURL";
+            this.txt_PosterURL.Size = new System.Drawing.Size(235, 27);
+            this.txt_PosterURL.TabIndex = 16;
+            // 
             // FilmEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txt_PosterURL);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_TurAdi);
             this.Controls.Add(this.label4);
@@ -183,5 +203,7 @@
         private TextBox txt_ImdbID;
         private Label label5;
         private TextBox txt_TurAdi;
+        private Label label6;
+        private TextBox txt_PosterURL;
     }
 }

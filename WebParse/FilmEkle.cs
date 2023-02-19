@@ -25,9 +25,10 @@ namespace WebParse
             Film newFilm = new Film();
             try
             {
-                bool doğrulaYıl = int.TryParse(txt_Yil.Text, out int Yıl);
-                bool doğrulaPuan = int.TryParse(txt_ImdbPuan.Text, out int puan);
-                if (doğrulaYıl == true)
+                bool dogrulaYıl = int.TryParse(txt_Yil.Text, out int Yıl);
+                bool dogrulaPuan = decimal.TryParse(txt_ImdbPuan.Text, out decimal puan);
+                
+                if (dogrulaYıl == true)
                 {
                     newFilm.Yıl = Yıl;
                 }
@@ -35,7 +36,7 @@ namespace WebParse
                 {
                     MessageBox.Show("hatalı yıl Girişi sadece rakam giriniz");
                 }
-                if (doğrulaPuan)
+                if (dogrulaPuan)
                 {
                     newFilm.imdbPuanı = puan;
                 }
@@ -43,7 +44,18 @@ namespace WebParse
                 {
                     MessageBox.Show("hatalı Imdb Puanı girişi sadece rakam giriniz");
                 }
-                               
+                newFilm.Ad = txt_FilmAdi.Text;
+                newFilm.Poster = txt_PosterURL.Text;
+                newFilm.imdbId = txt_ImdbID.Text;
+
+                //var query = db.Turler.Where(x => x.Id == int.Parse(txt_TurAdi.Text)).FirstOrDefault();
+                //newFilm.Tur = query;
+
+                db.Filmler.Add(newFilm);
+                db.SaveChanges();
+                dataGridView1.DataSource = db.Filmler.ToList();
+
+
             }
             catch (Exception)
             {

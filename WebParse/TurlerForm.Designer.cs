@@ -32,7 +32,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Tur_Ekle = new System.Windows.Forms.Button();
-            this.brn_Tur_Guncelle = new System.Windows.Forms.Button();
+            this.sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
+            this.rdo_Kaydet = new System.Windows.Forms.RadioButton();
+            this.Rdo_Guncelle = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,26 +72,44 @@
             this.btn_Tur_Ekle.Name = "btn_Tur_Ekle";
             this.btn_Tur_Ekle.Size = new System.Drawing.Size(114, 42);
             this.btn_Tur_Ekle.TabIndex = 3;
-            this.btn_Tur_Ekle.Text = "Tur Ekle";
+            this.btn_Tur_Ekle.Text = "Kaydet";
             this.btn_Tur_Ekle.UseVisualStyleBackColor = true;
             this.btn_Tur_Ekle.Click += new System.EventHandler(this.btn_Tur_Ekle_Click);
             // 
-            // brn_Tur_Guncelle
+            // sqlCommand1
             // 
-            this.brn_Tur_Guncelle.Location = new System.Drawing.Point(379, 88);
-            this.brn_Tur_Guncelle.Name = "brn_Tur_Guncelle";
-            this.brn_Tur_Guncelle.Size = new System.Drawing.Size(114, 42);
-            this.brn_Tur_Guncelle.TabIndex = 4;
-            this.brn_Tur_Guncelle.Text = "Türü Güncelle";
-            this.brn_Tur_Guncelle.UseVisualStyleBackColor = true;
-            this.brn_Tur_Guncelle.Click += new System.EventHandler(this.brn_Tur_Guncelle_Click);
+            this.sqlCommand1.CommandTimeout = 30;
+            this.sqlCommand1.EnableOptimizedParameterBinding = false;
+            // 
+            // rdo_Kaydet
+            // 
+            this.rdo_Kaydet.AutoSize = true;
+            this.rdo_Kaydet.Location = new System.Drawing.Point(332, 98);
+            this.rdo_Kaydet.Name = "rdo_Kaydet";
+            this.rdo_Kaydet.Size = new System.Drawing.Size(113, 24);
+            this.rdo_Kaydet.TabIndex = 4;
+            this.rdo_Kaydet.TabStop = true;
+            this.rdo_Kaydet.Text = "Yeni Tür Ekle";
+            this.rdo_Kaydet.UseVisualStyleBackColor = true;
+            // 
+            // Rdo_Guncelle
+            // 
+            this.Rdo_Guncelle.AutoSize = true;
+            this.Rdo_Guncelle.Location = new System.Drawing.Point(332, 128);
+            this.Rdo_Guncelle.Name = "Rdo_Guncelle";
+            this.Rdo_Guncelle.Size = new System.Drawing.Size(87, 24);
+            this.Rdo_Guncelle.TabIndex = 5;
+            this.Rdo_Guncelle.TabStop = true;
+            this.Rdo_Guncelle.Text = "Güncelle";
+            this.Rdo_Guncelle.UseVisualStyleBackColor = true;
             // 
             // TurlerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1027, 343);
-            this.Controls.Add(this.brn_Tur_Guncelle);
+            this.ClientSize = new System.Drawing.Size(651, 343);
+            this.Controls.Add(this.Rdo_Guncelle);
+            this.Controls.Add(this.rdo_Kaydet);
             this.Controls.Add(this.btn_Tur_Ekle);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -110,6 +130,8 @@
         private TextBox textBox1;
         private Label label1;
         private Button btn_Tur_Ekle;
-        private Button brn_Tur_Guncelle;
+        private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
+        private RadioButton rdo_Kaydet;
+        private RadioButton Rdo_Guncelle;
     }
 }
